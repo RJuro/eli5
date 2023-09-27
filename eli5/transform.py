@@ -28,7 +28,7 @@ def transform_feature_names(transformer, in_names=None):
     -------
     feature_names : list of str
     """
-    if hasattr(transformer, 'get_feature_names'):
-        return transformer.get_feature_names()
+    if hasattr(transformer, 'get_feature_names_out'):
+        return transformer.get_feature_names_out()
     raise NotImplementedError('transform_feature_names not available for '
                               '{}'.format(transformer))
